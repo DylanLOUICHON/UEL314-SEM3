@@ -1,0 +1,16 @@
+<h2>Supprimer un utilisateur</h2>
+
+<label for="userId">Identifiant : </label>
+<input type="number" id="userId" [(ngModel)]="userIdToDelete" style="width: 50px;">
+
+<br />
+
+<button type="button" (click)="deleteUser()">Supprimer</button>
+
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div>
+
+<div *ngIf="successMessage" class="success-message">
+  {{ successMessage }}
+</div>

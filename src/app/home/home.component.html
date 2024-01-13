@@ -1,0 +1,15 @@
+
+<h2>UE L314 - SEMAINE 3</h2>
+
+<a routerLink="/users">Afficher la liste des utilisateurs</a> <br />
+
+<a [routerLink]="['/users', userId]">Rechercher un utilisateur</a> <input type="number" id="userId" [(ngModel)]="userId" style="width: 50px;"> <br />
+
+<a [routerLink]="['/create-user']">Créer un utilisateur</a> <br />
+
+<a [routerLink]="['/update-user', userIdToUpdate]">Modifier un utilisateur</a><input type="number" id="userIdToUpdate" [(ngModel)]="userIdToUpdate" style="width: 50px;"> <br />
+
+<a routerLink="/delete-user">Supprimer un utilisateur</a>
+
+
+<router-outlet></router-outlet>

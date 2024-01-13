@@ -1,0 +1,10 @@
+<h2>Information de l'utilisateur</h2>
+
+<div *ngIf="userDetails; else noUserMessage">
+    <p>Nom : {{ userDetails.lastname }} <br />
+    Prénom : {{ userDetails.firstname }}</p>
+</div>
+
+<ng-template #noUserMessage>
+  <p>Aucun utilisateur trouvé avec l'identifiant : {{ userId }}</p>
+</ng-template>

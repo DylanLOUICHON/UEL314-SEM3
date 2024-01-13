@@ -1,0 +1,21 @@
+<h2>Modifier un utilisateur</h2>
+
+<form (ngSubmit)="updateUser()">
+  <div *ngIf="userData">
+    <label for="firstname">Prénom:</label>
+    <input type="text" id="firstname" name="firstname" [(ngModel)]="userData.firstname">
+
+    <label for="lastname">Nom:</label>
+    <input type="text" id="lastname" name="lastname" [(ngModel)]="userData.lastname">
+
+    <button type="submit">Modifier</button>
+  </div>
+</form>
+
+<div *ngIf="successMessage" class="success-message">
+  {{ successMessage }}
+</div>
+
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div>
