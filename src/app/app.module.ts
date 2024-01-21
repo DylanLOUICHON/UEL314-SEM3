@@ -13,6 +13,9 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

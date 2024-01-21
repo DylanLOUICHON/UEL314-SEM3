@@ -1,1 +1,11 @@
-<p>header works!</p>
+<nav>
+    <span class="title">UE L314 - WebMobile</span>
+    <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a routerLink="/users">Liste des utilisateurs</a></li>
+        <li><a [routerLink]="['/users', userId]">Rechercher un utilisateur</a> <input type="number" id="userId" [(ngModel)]="userId" style="width: 50px;"> </li>
+        <li><a [routerLink]="['/create-user']">Créer un utilisateur</a></li>
+        <li><a [routerLink]="['/update-user', userIdToUpdate]">Modifier un utilisateur</a> <input type="number" id="userIdToUpdate" [(ngModel)]="userIdToUpdate" style="width: 50px;"></li>
+        <li><a routerLink="/delete-user">Supprimer un utilisateur</a></li>
+    </ul>
+</nav>

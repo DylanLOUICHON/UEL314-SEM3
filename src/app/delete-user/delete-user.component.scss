@@ -1,0 +1,41 @@
+@import '_variables';
+
+
+.container {
+  background: linear-gradient(to bottom, $primaryColor, $secondaryColor);
+  min-height: 100vh;
+  color: $textColor;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 150px;
+  font-size: 30px;
+
+  h2 {
+    span {
+      display: inline-block;
+      background: $backgroundText;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  form {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid $textColor;
+    border-radius: 8px;
+    background-color: transparent;
+    color: $textColor;
+    margin-bottom: 10px;
+  }
+  
+}

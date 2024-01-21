@@ -1,11 +1,31 @@
+<app-header></app-header>
 
-<h2>Liste des utilisateurs</h2>
+<!-- users.component.html -->
+<div class="container">
 
-<ul>
-  <li *ngFor="let user of users">
-    {{ user.id }} - {{ user.firstname }}  {{ user.lastname }}
-  </li>
-</ul>
+  <h2 class="centered-title">Liste des <br/>
+    <span>utilisateurs</span></h2>
 
-<p *ngIf="!users || users.length === 0">Aucun utilisateur trouvé.</p>
+  <div *ngIf="users && users.length > 0">
 
+  <div class="user-card">
+    <div *ngFor="let user of users">
+      <mat-card>
+        <mat-card-header>
+          <div class="avatar-container">
+            <img class="avatar" src="../../assets/userAvatar.png" alt="Avatar">
+          </div>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card-title>{{ user.firstname }} {{ user.lastname }}</mat-card-title>
+          <p>{{ user.id }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+
+  </div>
+
+  <p *ngIf="!users || users.length === 0">Aucun utilisateur trouvé.</p>
+</div>

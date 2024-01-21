@@ -1,21 +1,29 @@
-<h2>Modifier un utilisateur</h2>
+<!-- update-user.component.html -->
+<div class="page-container">
+  <app-header></app-header>
 
-<form (ngSubmit)="updateUser()">
-  <div *ngIf="userData">
-    <label for="firstname">Prénom:</label>
-    <input type="text" id="firstname" name="firstname" [(ngModel)]="userData.firstname">
+  <div class="container">
+    <h2>Modifier un <br/><span>utilisateur</span></h2>
 
-    <label for="lastname">Nom:</label>
-    <input type="text" id="lastname" name="lastname" [(ngModel)]="userData.lastname">
+    <form (ngSubmit)="updateUser()">
+      <div *ngIf="userData">
 
-    <button type="submit">Modifier</button>
+        <input type="text" id="lastname" name="lastname" [(ngModel)]="userData.lastname" placeholder="Nom">
+        <input type="text" id="firstname" name="firstname" [(ngModel)]="userData.firstname" placeholder="Prénom">
+
+
+        <button type="submit" class="btn">Modifier</button>
+      </div>
+    </form>
+
+    <br/>
+
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
   </div>
-</form>
-
-<div *ngIf="successMessage" class="success-message">
-  {{ successMessage }}
-</div>
-
-<div *ngIf="errorMessage" class="error-message">
-  {{ errorMessage }}
 </div>

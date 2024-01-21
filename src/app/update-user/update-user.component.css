@@ -1,0 +1,53 @@
+/* COLORS */
+/* FONTS */
+@font-face {
+  font-family: "titleFont";
+  src: url("../../assets/fonts/titleFont.otf");
+}
+
+@font-face {
+  font-family: "subTitleFont";
+  src: url("../../assets/fonts/subTitleFont.ttf");
+}
+
+/* CSS */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: linear-gradient(to bottom, #0E0B26, #04091D);
+  min-height: 100vh;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 150px;
+  font-size: 30px;
+}
+
+.container h2 span {
+  display: inline-block;
+  background: linear-gradient(to left, #7e03aa, #ea00ff, #250150);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container form {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.container input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 10px;
+}

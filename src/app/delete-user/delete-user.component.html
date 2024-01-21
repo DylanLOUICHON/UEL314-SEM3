@@ -1,16 +1,30 @@
-<h2>Supprimer un utilisateur</h2>
+<div class="page-container">
 
-<label for="userId">Identifiant : </label>
-<input type="number" id="userId" [(ngModel)]="userIdToDelete" style="width: 50px;">
+  <app-header></app-header>
 
-<br />
+  <div class="container">
+    <h2>Suppression d'un <br/>
+    <span>utilisateur</span></h2>
 
-<button type="button" (click)="deleteUser()">Supprimer</button>
+    <div>
+      <label for="userId">Identifiant : </label>
+      <input type="number" id="userId" [(ngModel)]="userIdToDelete" style="width: 50px;">
+    </div>
+    
+    <br />
 
-<div *ngIf="errorMessage" class="error-message">
-  {{ errorMessage }}
-</div>
+    <button type="button" (click)="deleteUser()" class="btn">
+      - Supprimer
+    </button>
 
-<div *ngIf="successMessage" class="success-message">
-  {{ successMessage }}
+    <br/>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+  </div>
 </div>

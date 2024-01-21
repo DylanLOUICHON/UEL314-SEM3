@@ -1,0 +1,18 @@
+/* COLORS */
+/* CARDS */
+/* FONTS */
+@font-face {
+  font-family: "titleFont";
+  src: url("../../assets/fonts/titleFont.otf");
+}
+
+@font-face {
+  font-family: "subTitleFont";
+  src: url("../../assets/fonts/subTitleFont.ttf");
+}
+
+/* CSS */
+body {
+  margin: 0;
+  padding: 0;
+}

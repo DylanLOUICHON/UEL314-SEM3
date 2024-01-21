@@ -1,19 +1,30 @@
-<!-- create-user.component.html -->
+<div class="page-container">
 
-<h2>Création d'un utilisateur</h2>
+<app-header></app-header>
 
-<form [formGroup]="userForm">
-  <div>
-    <label for="lastname">Nom : </label>
-    <input type="text" id="lastname" formControlName="lastname"> <span *ngIf="isFieldInvalid('lastname')">Veuillez remplir ce champ.</span>
+
+  <div class="container">
+
+    <h2>Création d'un <br/>
+      <span>utilisateur</span></h2>
+
+      <form [formGroup]="userForm">
+        <div>
+          <input type="text" id="lastname" formControlName="lastname" placeholder="Nom">
+        </div>
+        <div>
+          <input type="text" id="firstname" formControlName="firstname" placeholder="Prénom">
+        </div>
+      
+        <button type="button" (click)="createUser()" class="btn">
+          + Ajouter
+        </button>
+      </form>
+
+      <br/>
+
+    <div *ngIf="successMessage">{{ successMessage }}</div>
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+
   </div>
-  <div>
-    <label for="firstname">Prénom : </label>
-    <input type="text" id="firstname" formControlName="firstname"><span *ngIf="isFieldInvalid('firstname')">Veuillez remplir ce champ.</span>
-  </div>
-
-  <button type="button" (click)="createUser()">Créer</button>
-</form>
-
-<div *ngIf="successMessage">{{ successMessage }}</div>
-<div *ngIf="errorMessage">{{ errorMessage }}</div>
+</div>

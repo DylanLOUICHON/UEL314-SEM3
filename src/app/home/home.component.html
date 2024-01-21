@@ -1,7 +1,25 @@
 
-<h2>UE L314 - SEMAINE 3</h2>
+<div class="page-container">
+  <app-header></app-header>
 
-<a routerLink="/users">Afficher la liste des utilisateurs</a> <br />
+  <div class="container">
+    <div class="content">
+      <h1 class="title">UE L314<br />WEBMOBILE</h1>
+      <p class="subTitle">
+        Cette UE L314 consiste à faire une application de CRUD <br/>
+        d'utilisateur avec Angular via une API en NestJS
+      </p>
+      <button class="btn">
+        Découvrir
+      </button>
+    </div>
+    <img class="fit-picture" src="../../assets/character_one.png" alt="Character one" />
+  </div>
+
+</div>
+
+
+<!--<a routerLink="/users">Afficher la liste des utilisateurs</a> <br />
 
 <a [routerLink]="['/users', userId]">Rechercher un utilisateur</a> <input type="number" id="userId" [(ngModel)]="userId" style="width: 50px;"> <br />
 
@@ -9,7 +27,8 @@
 
 <a [routerLink]="['/update-user', userIdToUpdate]">Modifier un utilisateur</a><input type="number" id="userIdToUpdate" [(ngModel)]="userIdToUpdate" style="width: 50px;"> <br />
 
-<a routerLink="/delete-user">Supprimer un utilisateur</a>
+<a routerLink="/delete-user">Supprimer un utilisateur</a>-->
+
 
 
 <router-outlet></router-outlet>
